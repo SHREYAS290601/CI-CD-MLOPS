@@ -18,3 +18,9 @@ jobs:
           cat metrics.txt
           
           
+          echo "Data Visualisation"
+          cml-publish Confusion_matrix.png --md >> report.md
+          cml-publish feature_importance.png --md >> report.md
+          cml-publish residulas.png --md >> report.md
+          
+          
