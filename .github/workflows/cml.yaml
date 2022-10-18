@@ -15,7 +15,7 @@ jobs:
           python train.py
           
           echo "## Model Metrics" > report.md
-          cat metrics.txt
+          cat metrics.txt >> report.md
           
           
           echo "Data Visualisation"
