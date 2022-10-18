@@ -14,7 +14,7 @@ jobs:
           pip install -r requirements.txt
           python train.py
           
-          echo "Model Metrics"
+          echo "## Model Metrics" > report.md
           cat metrics.txt
           
           
