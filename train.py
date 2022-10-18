@@ -19,7 +19,7 @@ x_train,x_test,y_train,y_test=train_test_split(df.drop('gender',axis=1),df.gende
 ##Model train
 rfr.fit(x_train,y_train)
 y_pred=rfr.predict(x_test)
-print(y_pred)
+# print(y_pred)
 
 ##Model eval
 acc=accuracy_score(y_test,y_pred)
@@ -52,7 +52,7 @@ plt.close()
 y_pred = rfr.predict(x_test) + np.random.normal(0,0.25,len(y_test))
 y_jitter = y_test + np.random.normal(0,0.25,len(y_test))
 res_df = pd.DataFrame(list(zip(y_jitter,y_pred)), columns = ["true","pred"])
-print(res_df.head())
+# print(res_df.head())
 ax = sb.scatterplot(x="true", y="pred",data=res_df)
 ax.set_aspect('equal')
 ax.set_xlabel('True gender',fontsize = axis_fs) 
